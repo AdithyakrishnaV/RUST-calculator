@@ -1,0 +1,87 @@
+// print hello world
+fn main(){
+    println!("hello Adi")
+}
+let x: i32 =32; //i32 -> 32 bit integer
+
+//dots are used to access fields of a value
+let pair: (char,i32) = ('a', 17);
+pair.0; // result is 'a'
+
+// function f -> void
+fn greet() {
+    println!("Welcome")
+}
+
+// function which returns an integer  
+//f -> i32
+//arrow indicates functions return type
+fn dice_roll() -> i32 {
+    6
+}
+// the above is equivalent to this:
+fn dice_roll() -> i32 {
+    return 6;
+}
+
+//this:
+let x = 42;
+//equals this:
+let x = {42};
+
+//if conditions are also expressions
+fn dice_roll() -> i32 {
+    if lucky {
+        6
+    }else {
+        4
+    }
+}
+
+//match is also an expression not a statement
+fn dice_roll() -> i32 {
+    match lucky {
+        true => 6,
+        false => 4,
+    }
+}
+// How to use match 
+fn main() {
+    let input = 2;
+    match input {
+        // If the input is 0, print Summer
+        0 => println!("Summer"),
+        // If the input is 1, print Winter
+        1 => println!("Winter"),
+        // If the input is 2, print Autumn
+        2 => println!("Autumn"),
+        // If the input is 3, print Spring
+        3 => println!("Spring"),
+        // If input does not match 0, 1, 2 or 3, print
+        // invalid input
+        _ => println!("Invalid input")
+
+    }
+}
+
+
+//dots are used to access fields of a value 
+let pair: (char,i32) = ('a', 17);
+pair.0; // result is 'a'
+//or call a method on a value
+let nick =  "hellothere";
+nick.len();// 10
+
+
+// crate::file::function
+let least = std::cmp::min(3,8)
+// std is a crate which is a library
+// cmp is a module which is a source file
+// min is a function
+
+
+let x = "vamos".len();// 4
+let x = str::len("vamos");// this is also 4
+
+
+//Usually a use keyword is used to shorten the path required to refer to a module item.
